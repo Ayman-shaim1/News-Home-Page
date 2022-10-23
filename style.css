@@ -154,8 +154,24 @@ header .menu-content .menu-list li a {
   }
 }
 /* End Header */
+
 /* Begin Hero Section */
-.hero{
+.hero {
+  display: flex;
+  gap: 30px;
+}
+.hero .latest-new {
+  flex: 2;
+}
+.hero .latest-new .latest-new-info {
   display: flex;
 }
+.hero .latest-new .latest-new-info .latest-new-title {
+  font-size: 48px;
+  font-weight: 700 !important;
+}
+.hero .news {
+  flex: 1;
+}
+
 /* End Hero Section */
