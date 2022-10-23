@@ -1,0 +1,161 @@
+@font-face {
+  font-family: Inter;
+  src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+/* Begin Variables */
+:root {
+  --soft-orange-color: hsl(35, 77%, 62%);
+  --soft-red-color: hsl(5, 85%, 63%);
+  --off-white-color: hsl(36, 100%, 99%);
+  --grayish-blue-color: hsl(233, 8%, 79%);
+  --dark-grayish-blue-color: hsl(236, 13%, 42%);
+  --very-dark-blue-color: hsl(240, 100%, 5%);
+  --font-size-paragraph: 15px;
+}
+/* End Variables */
+
+/* Begin Global Rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Inter";
+  background-color: var(--off-white-color);
+}
+p {
+  font-size: var(--font-size-paragraph);
+  color: var(--dark-grayish-blue-color);
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--soft-red-color) !important;
+}
+
+main {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  main {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    width: 1170px;
+  }
+}
+.overlay {
+  position: fixed;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+.overlay.show {
+  visibility: visible;
+}
+
+/* End Global Rules */
+
+/* Begin Header */
+header {
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  width: 45px;
+}
+header .menu-show-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+header .menu-content .menu-close-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+header .menu-content .menu-list {
+  display: flex;
+  align-items: center;
+}
+header .menu-content .menu-list li {
+  margin-right: 25px;
+}
+header .menu-content .menu-list li a {
+  font-size: 14px;
+  color: var(--dark-grayish-blue-color);
+}
+
+@media screen and (max-width: 768px) {
+  header .menu-show-btn {
+    display: block;
+  }
+
+  header .menu-content {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 60%;
+    background-color: var(--off-white-color);
+    z-index: 100;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  header .menu-content.show {
+    display: block;
+  }
+  header .menu-content .menu-close-btn {
+    float: right;
+    display: block;
+  }
+  header .menu-content .menu-list {
+    flex-direction: column;
+    float: left;
+    align-items: flex-start;
+    margin-top: 100px;
+  }
+  header .menu-content .menu-list li {
+    margin-top: 15px;
+  }
+  header .menu-content .menu-list li a {
+    font-size: 18px;
+  }
+}
+/* End Header */
+/* Begin Hero Section */
+.hero{
+  display: flex;
+}
+/* End Hero Section */
